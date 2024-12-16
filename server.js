@@ -35,7 +35,8 @@ app.use(bodyParser.json({ verify: rawBodyBuffer }));
  * Add routes
  */
 const homeRoutes = require("./routes/home/home");
-const apiRoutes = require("./routes/api/api");
+const apiPostRoutes = require("./routes/api/post");
+const apiGetRoutes = require("./routes/api/get");
 
 /**
  * Import React
@@ -46,8 +47,10 @@ app.use(express.static("client/build"));
 /**
  * Use routes
  */
+app.use("/api", apiGetRoutes);
+
 app.use("*", homeRoutes);
-app.post("*", apiRoutes);
+app.post("*", apiPostRoutes);
 
 // Start the server
 server.listen(PORT, function () {

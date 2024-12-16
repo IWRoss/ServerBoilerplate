@@ -19,8 +19,6 @@ router.post("/api/example", async (request, response) => {
   try {
     const payload = request.body.payload;
 
-    // console.log(payload);
-
     const result = await actions[payload.action](payload);
 
     console.log(result);
