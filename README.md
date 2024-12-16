@@ -1,6 +1,6 @@
 # Boilerplate Project
 
-This is a boilerplate project for a Node.js application with a client-side component.
+This is a boilerplate project for a Node.js application with a React client-side component using Firebase for authentication, Firestore for data storage, and Express for routing.
 
 ## Getting Started
 
