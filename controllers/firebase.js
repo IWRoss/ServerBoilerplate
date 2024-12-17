@@ -23,7 +23,7 @@ db.settings({
 });
 
 /**
- *
+ * Helper function for building a Firestore reference from a path array
  */
 const getRef = (path) => {
   let ref = db;

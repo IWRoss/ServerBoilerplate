@@ -40,7 +40,6 @@ const apiGetRoutes = require("./routes/api/get");
 
 /**
  * Import React
- * TODO
  */
 app.use(express.static("client/build"));
 
@@ -48,7 +47,6 @@ app.use(express.static("client/build"));
  * Use routes
  */
 app.use("/api", apiGetRoutes);
-
 app.use("*", homeRoutes);
 app.post("*", apiPostRoutes);
 
